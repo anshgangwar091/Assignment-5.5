@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club — Student Registration</title>
+    <meta name="description" content="Register to become an official member of the Campus Coding Club.">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Shared Navigation -->
+    <header>
+        <h1>Campus Coding Club</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="registration.html">Join the Club</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Student Membership Registration Form</h2>
+            <p>Please fill out all required fields to join the club for the current academic year.</p>
+
+            <form action="#" method="POST">
+                
+                <!-- Personal Info -->
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    
+                    <div class="form-group">
+                        <label for="fullname">Full Name:</label><br>
+                        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="student-id">Student ID Number:</label><br>
+                        <input type="text" id="student-id" name="student_id" placeholder="STU-12345" required>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="email">College Email Address:</label><br>
+                        <input type="email" id="email" name="email" placeholder="student@college.edu" required>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="year">Academic Year:</label><br>
+                        <select id="year" name="academic_year" required>
+                            <option value="" disabled selected>Select your current year</option>
+                            <option value="freshman">Freshman (1st Year)</option>
+                            <option value="sophomore">Sophomore (2nd Year)</option>
+                            <option value="junior">Junior (3rd Year)</option>
+                            <option value="senior">Senior (4th Year)</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <br>
+
+                <!-- Interests & Track -->
+                <fieldset>
+                    <legend>Technical Interests</legend>
+                    
+                    <p>Select tracks you are interested in attending (Check all that apply):</p>
+                    <input type="checkbox" id="track-web" name="tracks" value="web">
+                    <label for="track-web">Web Development (HTML/CSS/JS)</label><br>
+
+                    <input type="checkbox" id="track-python" name="tracks" value="python">
+                    <label for="track-python">Python & Data Science</label><br>
+
+                    <input type="checkbox" id="track-algo" name="tracks" value="algorithms">
+                    <label for="track-algo">Data Structures & Algorithms</label><br>
+
+                    <input type="checkbox" id="track-cyber" name="tracks" value="security">
+                    <label for="track-cyber">Cybersecurity Fundamentals</label>
+                </fieldset>
+
+                <br>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit">Submit Membership Application</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Campus Coding Club. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

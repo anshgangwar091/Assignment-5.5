@@ -1,0 +1,303 @@
+/* ==========================================================================
+   style.css — Assignment 5.5: CSS Fundamentals Mini-Project
+   ========================================================================== */
+
+/* 1. Design Tokens & CSS Variables in :root */
+:root {
+    /* Color Palette */
+    --primary-color: #1a365d;       /* Navy Blue */
+    --secondary-color: #2b6cb0;     /* Slate Blue */
+    --accent-color: #319795;        /* Teal Highlight */
+    --bg-color: #f7fafc;            /* Off-White Page Background */
+    --surface-color: #ffffff;       /* Card/Container Background */
+    --text-primary: #2d3748;        /* Charcoal Dark Text */
+    --text-muted: #718096;          /* Muted Gray Text */
+    --border-color: #e2e8f0;        /* Light Border Gray */
+
+    /* Spacing Tokens */
+    --space-xs: 6px;
+    --space-sm: 12px;
+    --space-md: 20px;
+    --space-lg: 32px;
+
+    /* Typography & Font Sizes */
+    --font-heading: 'Poppins', 'Segoe UI', sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-size-sm: 0.9rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.8rem;
+    --font-size-xxl: 2.2rem;
+
+    /* Visual Accents */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* 2. Global Resets & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: var(--space-md);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: var(--space-lg) 0;
+}
+
+/* 3. Navigation & Header Styling */
+header {
+    background-color: var(--surface-color);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xxl);
+    color: var(--primary-color);
+    margin-bottom: var(--space-xs);
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: var(--font-size-base);
+}
+
+nav {
+    background-color: var(--primary-color);
+    border-radius: var(--radius-sm);
+    margin-top: var(--space-md);
+    padding: var(--space-sm);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+/* 4. Headings & Text Styling */
+main {
+    background-color: var(--surface-color);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--space-xs);
+    margin-bottom: var(--space-md);
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    color: var(--primary-color);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+}
+
+p, ul, ol, dl {
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-base);
+}
+
+ul, ol {
+    padding-left: var(--space-lg);
+}
+
+li {
+    margin-bottom: var(--space-xs);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 5. Images Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    margin: var(--space-md) 0;
+}
+
+/* 6. Form Styling (registration.html & contact.html) */
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+    background-color: #fafbfc;
+}
+
+legend {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0 var(--space-xs);
+}
+
+.form-group {
+    margin-bottom: var(--space-sm);
+}
+
+label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    margin-top: var(--space-xs);
+    background-color: var(--surface-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    padding: var(--space-sm) var(--space-lg);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 7. Table Styling (index.html) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-md) 0;
+    font-size: var(--font-size-sm);
+}
+
+caption {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-xs);
+    color: var(--primary-color);
+    text-align: left;
+}
+
+th, td {
+    padding: var(--space-sm);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #edf2f7;
+}
+
+tfoot td {
+    font-style: italic;
+    color: var(--text-muted);
+    background-color: #f7fafc;
+}
+
+/* 8. Description List (about.html) */
+dt {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    color: var(--primary-color);
+    margin-top: var(--space-sm);
+}
+
+dd {
+    color: var(--text-muted);
+    margin-left: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+/* 9. Footer Styling */
+footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    margin-top: var(--space-lg);
+    padding: var(--space-md) 0;
+}
